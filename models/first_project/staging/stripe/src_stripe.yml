@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: A clone of a BigQuery dataset (Stripe).
+    database: dbt-project-tutorial
+    tables:
+      - name: payment
+        description: Raw Payments data
+        columns:
+         - name: id
+           description : Primary key for the table
+           #tests:
+              #- unique
+              #- not_null

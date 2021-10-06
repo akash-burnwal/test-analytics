@@ -1,13 +1,10 @@
+select
+    id as customer_id,
+    first_name,
+    last_name
 
-with customers as (
+from --{{ source('jaffle_shop', 'customers') }} 
 
-    select
-        id as customer_id,
-        first_name,
-        last_name
+dbt-project-tutorial.jaffle_shop.customers
 
-    from dbt-project-tutorial.jaffle_shop.customers
-
-)
-
-select * from customers
+--sourced from src_jaffle_shop.yml
